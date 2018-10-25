@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<head>
+	<title>Login One</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="__CSS__/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="__CSS__/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="__CSS__/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+	<link href="__CSS__/templatemo_style.css" rel="stylesheet" type="text/css">	
+</head>
+<body class="templatemo-bg-gray">
+	<h1 class="margin-bottom-15">Create Account</h1>
+	<div class="container">
+		<div class="col-md-12">			
+			<form class="form-horizontal templatemo-create-account templatemo-container" >
+				<div class="form-inner">
+					<div class="form-group">
+			          <div class="col-md-6">		          	
+			            <label for="first_name" class="control-label">First Name</label>
+			            <input type="text" class="form-control" id="first_name" placeholder="">       
+			            <span class="errorTips" style="color:red;margin-left: 20px;display:none;">错误提示信息...</span> 
+			          </div>  
+			          <div class="col-md-6">		          	
+			            <label for="last_name" class="control-label">Last Name</label>
+			            <input type="text" class="form-control" id="last_name" placeholder="">
+			            <span class="errorTips" style="color:red;margin-left: 20px;display:none;">错误提示信息...</span>             
+			          </div>             
+			        </div>
+			        <div class="form-group">
+			          <div class="col-md-8">		          	
+			            <label for="username" class="control-label">Email</label>
+			            <input type="email" class="form-control" id="email" name="email" placeholder="">
+			             <span class="errorTips" style="color:red;margin-left: 20px;display:none;">错误提示信息...</span>
+			          </div>      
+			           <div class="col-md-4">
+			           	<label for="code" class="control-label"></label>
+			            <input type="button" value="verification code" class="btn btn-info" id="dianji" onclick="timeout(this)" style="width:120px;height:34px;margin-top: 29px;">
+			          </div>
+			        </div>	
+			        <div class="form-group">
+			        	<div class="col-md-6">
+			        			<label for="code" class="control-label">Code</label>
+			        			<input type="text" name="code" class="form-control" id="ycode" placeholder="Please input verification code.">
+			        			<span class="errorTips" style="color:red;margin-left: 20px;display:none;">错误提示信息...</span>
+			        	</div>	
+
+			        </div>		
+			        <div class="form-group">
+			          <div class="col-md-6">		          	
+			            <label for="username" class="control-label">Username</label>
+			            <input type="text" class="form-control" id="username"  placeholder="">
+			            <span class="errorTips" style="color:red;margin-left: 20px;display:none;">错误提示信息...</span>             
+			          </div>
+			          <div class="col-md-6 templatemo-radio-group">
+			          	<label class="radio-inline">
+		          			<input type="radio" name="optionsRadios" id="optionsRadios1" value="1" checked> Male
+		          		</label>
+		          		<label class="radio-inline">
+		          			<input type="radio" name="optionsRadios" id="optionsRadios2" value="0"> Female
+		          		</label>
+			          </div> 
+			          <span class="errorTips" style="color:red;margin-left: 35px;display:none;">错误提示信息...</span>             
+			        </div>
+			        <div class="form-group">
+			          <div class="col-md-6">
+			            <label for="password" class="control-label">Password</label>
+			            <input type="password" class="form-control" id="password" placeholder="">
+			            <span class="errorTips" style="color:red;margin-left: 20px;display:none;">错误提示信息...</span> 
+			          </div>
+			          <div class="col-md-6">
+			            <label for="password" class="control-label">Confirm Password</label>
+			            <input type="password" class="form-control" id="password_confirm" placeholder="">
+			            <span class="errorTips" style="color:red;margin-left: 20px;display:none;">错误提示信息...</span> 
+			          </div>
+			        </div>
+			        <div class="form-group">
+			          <div class="col-md-12">
+			            <label><input type="checkbox" name="type" value="1">I agree to the <a href="javascript:;" data-toggle="modal" data-target="#templatemo_modal">Terms of Service</a> and <a href="#">Privacy Policy.</a></label>
+			            <span class="errorTips" style="color:red;margin-left: 20px;display:none;">错误提示信息...</span>
+			          </div>
+			        </div>
+			        <div class="form-group">
+			          <div class="col-md-12">
+			            <input type="button" value="Create account" class="btn btn-info" id="submit" style="width:120px;height:34px;">
+			            <a href="{:U('Login/login')}" class="pull-right">Login</a>
+			          </div>
+			        </div>	
+				</div>				    	
+		      </form>		      
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="templatemo_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Terms of Service</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<p>This form is provided by <a rel="nofollow" href="">used </a> that can be used for your websites. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+	        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+	        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<script type="text/javascript" src="__JS__/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="__JS__/bootstrap.min.js"></script>
+	<script type="text/javascript" src="__JS__/verify.js"></script>
+</body>
+</html>
+<script>
+	$("#submit").click(function(){
+		var surname=$("input[id='first_name']").val(),
+			name=$("input[id='last_name']").val(),
+			email=$("input[name='email']").val(),
+			username=$("input[id='username']").val(),
+			sex=$("input[name='optionsRadios']:checked").val(),
+			password=$("input[id='password']").val(),
+			password_confirm=$("input[id='password_confirm']").val(),
+			type=$("input[name='type']:checked").val();
+			code = $("input[name='code']").val();
+			if (!code){
+				$("input[id='ycode']").next().html('Please input verification code.').show();
+			}else{
+				$("input[id='ycode']").next().html('').show();
+			}
+			if(!surname){
+                $("input[id='first_name']").next().html('Please input your name.').show();
+                
+            }else{
+                $("input[id='first_name']").next().html('').show();
+            }
+            if(!name){
+                $("input[id='last_name']").next().html('Please enter the surname').show();
+                
+            }else{
+                $("input[id='last_name']").next().html('').show();
+            }
+            if(!email){
+               $("input[id='email']").next().html('Please input verification code.').show();
+                
+            }else{
+            	if (!isemail(email)) {
+            		$("input[id='email']").next().html('Please input the correct mailbox.').show();
+            	}else{
+            		$("input[id='email']").next().html('').show();
+            	}
+                
+            }
+            if(!username){
+                $("input[id='username']").next().html('Please input your mailbox.').show();
+                
+            }else{
+                $("input[id='username']").next().html('').show();
+            }
+            if (password=='' || !isstring(password)) {
+                $("input[id='password']").next().html('请输入6~18英文或数字的密码').show();
+            }else{
+                if (password!=password_confirm) {
+                    $("input[id='password_confirm']").next().html('两次密码不一致').show();
+                    $("input[id='password']").next().html('两次密码不一致').show();
+                }else{
+                    $("input[id='password_confirm']").next().html('').hide();
+                    $("input[id='password']").next().html('').hide();
+                }
+            }
+            if (!surname || !name || !email || !isemail(email) || !username || password=='' || !isstring(password) ||password!=password_confirm || !code) {
+				return;
+            }
+            if(type!=1){
+                error('Please agree to terms of service and privacy policy.');
+            }
+            
+   			$.ajax({
+                url:"{:U('Create/create')}",//设置请求地址
+                //设置与请求一起发送的数据
+                data:{
+                surname:surname,
+                name:name,
+                email:email,
+                username:username,
+                sex:sex,
+                password:password,
+                code:code
+                },
+                //设置请求成功后执行的函数脚本
+                dataType:'json',//设置接收数据格式
+                type:'post',//设置请求方法
+                //设置请求成功后执行的函数脚本
+                success:function(data){
+                	console.log(data)
+                if (data.type==200) {
+                        success(data.message,data.url);
+                        return false;
+                    }else{
+                        error(data.message);
+                    }
+                }
+            })
+	})
+
+
+		function timeout(v){
+				var email=$("input[name='email']").val()
+				    if(!email){
+		                $("input[id='email']").next().html('Please input mailbox information.').show();
+		            }else{
+		            	if (!isemail(email)) {
+		            		$("input[id='email']").next().html('Please input the correct mailbox.').show();
+		            	}else{
+		            		$("input[id='email']").next().html('').show();
+		            	}
+		            }
+					$.ajax({
+						url:"{:U('Create/fmail')}",
+						data:{
+							email:email
+						},
+						dataType: 'json',
+						type: 'post',
+						success:function(res){
+							console.log(res)
+						if (res.res == 1){
+							$("input[id='email']").next().css('color','green').html(res.desc).show();
+							settime(v)
+						}else{
+							$("input[id='email']").next().html(res.desc).show();
+						}
+				}
+			})
+		}
+	var countdown = 60;	
+		function settime(val){
+			if (countdown == 0) {
+				val.removeAttribute("disabled");  
+		        val.value="verification code";  
+		        countdown = 60;  
+      		  	return false; 
+			}else{
+			 if (countdown == 60){
+		        	timeout();
+		        }
+				val.setAttribute("disabled", true); 
+		        val.value="Resend(" + countdown + ")";  
+		        countdown--;  
+			}
+		setTimeout(function() {  
+	       settime(val);  
+	    },1000); 
+	}
+</script>
